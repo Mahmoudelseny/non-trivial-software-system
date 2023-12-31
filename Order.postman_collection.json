@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "cc00776e-de2d-43b5-845f-9f943e1902e1",
+		"name": "Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31992070"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ismaill\",\r\n    \"username\": \"ismaill\",\r\n    \"hashedPassword\": \"123456\",\r\n    \"balance\": 3000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://identity.getpostman.com/client-auth/confirm?auth_challenge=89d4a42bb55a00eb7e5c6b571fa980ee38ff8136764784016e6a8daa27ac8c05&auth_device=app_native&auth_device_version=10.21.0",
+					"protocol": "https",
+					"host": [
+						"identity",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"client-auth",
+						"confirm"
+					],
+					"query": [
+						{
+							"key": "auth_challenge",
+							"value": "89d4a42bb55a00eb7e5c6b571fa980ee38ff8136764784016e6a8daa27ac8c05"
+						},
+						{
+							"key": "auth_device",
+							"value": "app_native"
+						},
+						{
+							"key": "auth_device_version",
+							"value": "10.21.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "runStock",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/runStock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"runStock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "_StockDisplay",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/displayStock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"displayStock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chooseProduct/createOrder",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/chooseProduct/buds/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"chooseProduct",
+						"buds",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "_orderDisplay",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/display_order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"display_order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchase_order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/purchase_order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"purchase_order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "_purchasesDisplay",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order/display_purchases",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"display_purchases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewInbox",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/notification/ViewInbox",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notification",
+						"ViewInbox"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CancelOrder",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order/CancelOrder/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"CancelOrder",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
